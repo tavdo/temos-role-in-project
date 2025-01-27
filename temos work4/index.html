@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe API Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container">
+        <div class="content">
+            <h4 class="highlight">Designed for developers</h4>
+            <h1>Ship more quickly with powerful and easy-to-use APIs</h1>
+            <p>Save engineering time with unified payments functionality. We obsess over the maze of gateways, payments rails, and financial institutions that make up the global economic landscape so that your teams can build what you need on one platform.</p>
+            <a href="#" class="btn">Read the docs →</a>
+        </div>
+
+        <div class="code-snippet">
+            <pre>
+<code>const stripe = require('stripe')('sk_test_BQokikJ0vBla...');
+await stripe.paymentIntents.create({
+    amount: 2000,
+    currency: 'usd'
+});</code>
+            </pre>
+            <div class="terminal">
+                <p>$ node server.js && stripe listen</p>
+                <p>> Ready! Waiting for requests...</p>
+                <p><span class="success">[200]</span> payment_intent.created</p>
+                <p><span class="success">[200]</span> charge.succeeded</p>
+                <p><span class="success">[200]</span> payment_intent.succeeded</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <span>🚀</span>
+            <h3>Use Stripe with your stack</h3>
+            <p>We offer client and server libraries in everything from React and PHP to .NET and iOS.</p>
+            <a href="#">See libraries →</a>
+        </div>
+
+        <div class="feature">
+            <span>🛠️</span>
+            <h3>Try no-code options</h3>
+            <p>Customize and deploy payments interfaces directly from the Stripe Dashboard.</p>
+            <a href="#">Explore no-code →</a>
+        </div>
+
+        <div class="feature">
+            <span>📦</span>
+            <h3>Explore prebuilt integrations</h3>
+            <p>Connect Stripe to over a hundred tools including Adobe, Salesforce, and Xero.</p>
+            <a href="#">Browse App Marketplace →</a>
+        </div>
+
+        <div class="feature">
+            <span>🛠️</span>
+            <h3>Build on Stripe Apps</h3>
+            <p>Create an app just for your team or for the millions of businesses on Stripe.</p>
+            <a href="#">Learn about Apps →</a>
+        </div>
+    </section>
+</body>
+</html>

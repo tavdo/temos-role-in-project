@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0f1f;
+    color: white;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Left Content */
+.content {
+    max-width: 100%;
+}
+
+.highlight {
+    color: #00bcd4;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #b0b3c2;
+}
+
+.btn {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Code Snippet */
+.code-snippet {
+    background-color: #10172a;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%; /* Full width on small screens */
+    margin-top: 20px;
+}
+
+pre {
+    background-color: #0f172a;
+    padding: 10px;
+    border-radius: 5px;
+    color: #c3e88d;
+    font-size: 12px;
+}
+
+.terminal {
+    background-color: #1e293b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.success {
+    color: #4caf50;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-direction: column; /* Stack features */
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.feature {
+    width: 100%; /* Full width */
+    background-color: #10172a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    font-size: 12px;
+    color: #b0b3c2;
+}
+
+.feature a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Responsive Styles */
+@media (min-width: 390px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .content {
+        max-width: 50%;
+    }
+
+    .code-snippet {
+        width: 40%;
+    }
+
+    .features {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .feature {
+        width: 23%;
+    }
+}
