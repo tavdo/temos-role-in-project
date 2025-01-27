@@ -1,0 +1,137 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #101010;
+  }
+  
+  p {
+    margin: 0 0 1rem;
+  }
+  
+  a {
+    color: #635bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #635bff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5147d9;
+    transform: scale(1.05);
+  }
+  
+  /* Header Styling */
+  .subheading-sta-wrapper {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+    color: #635bff;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  
+  /* Highlight Section */
+  .highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  
+  .stats {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .stats h2 {
+    font-size: 2rem;
+    color: #635bff;
+  }
+  
+  .tag {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    color: #635bff;
+    border: 1px solid #635bff;
+    border-radius: 5px;
+  }
+  .card img{
+    width: 690px;
+  }
+ 
+  /* Logos */
+  footer.logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  footer.logos img {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  
+  footer.logos img:hover {
+    opacity: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .highlight {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .stats {
+      align-items: center;
+      max-width: 100%;
+    }
+  
+    .card {
+      order: -1;
+    }
+  
+    footer.logos {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
