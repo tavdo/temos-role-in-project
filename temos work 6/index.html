@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Spinning Globe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>The backbone for global commerce</h1>
+            <p>Stripe makes moving money as easy and programmable as moving data. Our teams are based in offices around the world and process hundreds of billions of dollars yearly for businesses of all sizes.</p>
+
+            <div class="stats">
+                <div class="stat">500M+ API requests per day.</div>
+                <div class="stat">99.999% historical uptime for Stripe services.</div>
+                <div class="stat">90% of U.S. adults have bought from businesses using Stripe.</div>
+                <div class="stat">135+ currencies and payment methods supported.</div>
+            </div>
+        </div>
+
+        <canvas class="globe" id="globeCanvas"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script>
+        // Set up the globe with Three.js
+        const canvas = document.getElementById('globeCanvas');
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+        camera.position.z = 3.5;
+
+        // Create the globe
+        const sphereGeometry = new THREE.SphereGeometry(1.5, 64, 64);
+        const sphereMaterial = new THREE.MeshBasicMaterial({
+            color: 0x003b6f,
+            wireframe: true,
+        });
+        const globe = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        scene.add(globe);
+
+        // Position the globe
+        globe.position.set(0.75, 0, 0); // Shift the globe to the right
+
+        // Animation loop
+        function animate() {
+            globe.rotation.y += 0.005; // Rotate the globe
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
